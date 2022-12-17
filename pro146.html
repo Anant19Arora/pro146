@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+     <a-sky color="#EBEBEB"></a-sky>
+
+      <a-plane
+        id="ground"
+        color="grey"
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="20"
+        height="10"
+      ></a-plane>
+
+     
+      
+      <a-sphere
+        id="head"
+        color="#0066ff"
+        position="0 8 0"
+        width="3.2"
+        height="2.2"
+      >
+      </a-sphere>
+
+     
+
+
+
+
+
+      <a-box
+        color="black"
+        position="-0.6 8 1"
+        height="0.1"
+        rotation="0 4 0"
+        animation="property: position; from:-0.6 8.2 1;to: -0.63 8.5 0.9;dir:alternate;loop: true; dur: 1000;"
+      
+      >
+      </a-box>
+
+      <a-sphere
+        color="red"
+        radius="0.2"
+        position="-0.63 8 0.9"
+        ></a-sphere>
+
+
+
+
+      <a-box
+        color="black"
+        position="0.63 8.3 1"
+        radius="0.8"
+        height="0.1"
+        rotation="0 4 0"
+        
+      >
+      </a-box>
+      <a-sphere
+        color="red"
+        radius="0.2"
+        position="0.63 8.1 0.9"
+        ></a-sphere>
+
+      
+
+      <!-- Neck -->
+      <a-box id="neck" color="#000066" position="0 6.3 -1" width="0.1" height="1">
+      </a-box>
+      <a-box id="neck" color="#000066" position="0.3 6.3 -1" width="0.1" height="1">
+      </a-box>
+      <a-box id="neck" color="#000066" position="-0.3 6.3 -1" width="0.1" height="1">
+      </a-box>
+
+      <!-- Body -->
+     
+      <a-entity
+        position="0 4 0"
+        geometry="primitive: dodecahedron; radius: 2;"
+        material="color:#2c0373;"
+      ></a-entity>
+
+
+
+      <!-- Left Hand -->
+      <a-cylinder
+        position="-2 4.1 0"
+        rotation="60 90 0"
+        color="#ff8c1a"
+        height="3"
+        width="0.2"
+        radius="0.5"
+      ></a-cylinder>
+  
+
+     
+      
+
+      <!-- Right Hand -->
+      <a-cylinder
+      position="2 4.1 0"
+      rotation="60 -90 0"
+        color="#ff8c1a"
+        height="3"
+        width="0.2"
+        radius="0.5"
+        ></a-cylinder>
+      
+      
+
+      <!-- Left Legs -->
+      <a-cylinder color="orange" radius="0.4" height="3.5" position="-0.5 0.7 0">
+      </a-cylinder>
+
+      
+      <a-entity
+        position="-1 1.4 -0.2"
+        rotation="90 0 0"
+        color="#fff"
+      ></a-entity>
+
+      <!-- Right Leg -->
+      <a-cylinder rotation="0 0 45" color="orange" radius="0.4" height="3.5" position="2 1 0">
+        
+      </a-cylinder>
+
+     
+
+      <!--  --------- CAMERA --------- -->
+
+      <a-camera look-controls-enabled wasd-controls-enabled position="0 5 15">
+      </a-camera>
+    </a-scene>
+    <!-- Closing scene -->
+  </body>
+</html>
